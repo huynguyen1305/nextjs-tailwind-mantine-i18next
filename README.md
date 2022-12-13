@@ -47,7 +47,23 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 - All components inside page will write in /feature/folder-page
 - All GENERAL or SHARED components will write in /components folder
 - For Image outside, pass url to `remotePatterns` in `next.config.js`. 
-- For Image Component: Limit use `fill` props because of it can't responsive. For not optimize image, pass `unoptimized` props to Image component
+- For Image Component: Limit use `fill` props because of it can't responsive. Use this:
+```shell
+<div style={{ position: 'relative', width: '300px' }}>
+   <Image
+     src="https://nxas.nexon.com/images/background/pc-background-07.png"
+     alt="testPic"
+     width={1280} // This will be resolution of image. Suggest: 1280x720 (HD)
+     height={720} // This will be resolution of image. Suggest: 1280x720 (HD)
+     style={{
+       width: '100%',
+       height: 'auto',
+       maxHeight: 'calc(100vh - 68px)',
+       objectFit: 'cover',
+      }} // Treat image span full parent div width
+    />
+</div>
+```
 
 
 ### Test workflow:
