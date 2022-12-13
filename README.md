@@ -24,6 +24,21 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 - Priority: 
   - Feature components
   - Component in `/components`
+  
+ ### Git workflow:
+- #### Before coding: 
+  - Go to Jira and create task to get Task Code
+  - Checkout new branch base on Task Code
+- #### Before commit:
+  - Check and change/update: `git status`
+  - If has any, stash your code `git stash` and pull new change `git pull`
+  - After pull, `git stash list` to show list stash. And choose stash {id}
+  - (*Need Carefully) Check that stash have conflict with our local code `git stash show -p stash@{id}`. 
+  - Then pick stash {id} `git stash apply stash@{id}` or `git stash pop` to get and clean up newest stash
+  - Resolve conflict if have, then add `git add .`
+  - After add, run `yarn commit` to start `cz`. Remember, subject will be the Jira Task Code
+  
+
 
 
 ### Features
@@ -40,10 +55,6 @@ Developer experience first:
 - 🚓 Lint git commit with Commitlint
 - 📓 Write standard compliant commit messages with Commitizen
 - 🦺 Unit Testing with Jest and React Testing Library
-- 🧪 E2E Testing with Cypress
-- 👷 Run tests on pull request with GitHub Actions
-- 🎁 Automatic changelog generation with Semantic Release
-- 🔍 Visual testing with Percy (Optional)
 - 💡 Absolute Imports using `@` prefix
 - 🗂 VSCode configuration: Debug, Settings, Tasks and extension for PostCSS, ESLint, Prettier, TypeScript, Jest
 - 🤖 SEO metadata, JSON-LD and Open Graph tags with Next SEO
