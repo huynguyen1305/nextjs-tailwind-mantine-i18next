@@ -58,7 +58,6 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
      style={{
        width: '100%',
        height: 'auto',
-       maxHeight: 'calc(100vh - 68px)',
        objectFit: 'cover',
       }} // Treat image span full parent div width
     />
