@@ -28,19 +28,17 @@ const Page2 = () => {
       <hr />
 
       <section>
-        <div style={{ position: 'relative' }}>
+        <div style={{ position: 'relative', width: '500px' }}>
           <Image
             src="https://nxas.nexon.com/images/background/pc-background-07.png"
             alt="testPic"
-            width={1920} // any, Next.js will resize
-            height={1080} // any, Next.js will resize
+            width={1280} // This will be resolution of image. Suggest: 1280x720 (HD)
+            height={720} // This will be resolution of image. Suggest: 1280x720 (HD)
             style={{
               width: '100%',
               height: 'auto',
-              maxHeight: 'calc(100vh - 68px)',
               objectFit: 'cover',
-            }}
-            unoptimized
+            }} // Treat image span full parent div width
           />
         </div>
       </section>

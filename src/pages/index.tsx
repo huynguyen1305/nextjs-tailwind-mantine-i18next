@@ -25,7 +25,7 @@ const Index = () => {
       </section>
 
       <section>
-        <h1>{t('home')} haha</h1>
+        <h1>{t('home')}</h1>
       </section>
     </>
   );
