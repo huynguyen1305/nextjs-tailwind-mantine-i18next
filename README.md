@@ -112,6 +112,8 @@ If you are VSCode users, you can have a better integration with VSCode by instal
 
 With the plugins installed on your VSCode, ESLint and Prettier can automatically fix the code and show you the errors. Same goes for testing, you can install VSCode Jest extension to automatically run your tests and it also show the code coverage in context.
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ### License
 
 Licensed under the MIT License, Copyright © 2022
