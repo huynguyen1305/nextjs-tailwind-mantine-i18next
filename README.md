@@ -1,3 +1,37 @@
+### Getting started
+
+Run the following command on your local environment:
+
+```shell
+git clone https://github.com/huynguyen1305/nextjs-tailwind-mantine-i18next.git my-project-name
+cd my-project-name
+yarn install
+```
+
+Then, you can run locally in development mode with live reload:
+
+```shell
+yarn dev
+```
+
+Open http://localhost:3000 with your favorite browser to see your project.
+
+**Note: 
+- Remove this remote origin: `git remote remove origin`
+- Then add your remote repo: `git remote set-url origin git://new.url.here`
+
+### Customization
+
+You can easily configure Next js Boilerplate by making a search in the whole project with `FIXME:` for making quick customization. Here is some of the most important files to customize:
+
+- `public/apple-touch-icon.png`, `public/favicon.ico`, `public/favicon-16x16.png` and `public/favicon-32x32.png`: your website favicon, you can generate from https://favicon.io/favicon-converter/
+- `src/styles/global.scss`: your SCSS file using Tailwind CSS
+- `src/config/appSEOConfig.ts`: configuration SEO
+- `next-sitemap.config.js`: sitemap configuration
+
+You have access to the whole code source if you need further customization. The provided code is only example for you to start your project. The sky is the limit 🚀.
+
+
 ### Notes for workflow:
 - All page/components must have below, for all page translated
 ```shell
@@ -37,9 +71,21 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   - Then pick stash {id} `git stash apply stash@{id}` or `git stash pop` to get and clean up newest stash
   - Resolve conflict if have, then add `git add .`
   - After add, run `yarn commit` to start `cz`. Remember, subject will be the Jira Task Code
-  
+ 
+### Commit Message Format
+```shell
+yarn commit
+```
 
+### Deploy to production
+```shell
+$ yarn build
+$ yarn start
+```
 
+---
+---
+---
 
 ### Features
 Developer experience first:
@@ -62,47 +108,6 @@ Developer experience first:
 - ⚙️ [Bundler Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
 - 🌈 Include a FREE minimalist theme
 - 💯 Maximize lighthouse score
-
-### Getting started
-
-Run the following command on your local environment:
-
-```shell
-git clone --depth=1 https://github.com/ixartz/Next-js-Boilerplate.git my-project-name
-cd my-project-name
-yarn install
-```
-
-Then, you can run locally in development mode with live reload:
-
-```shell
-yarn dev
-```
-
-Open http://localhost:3000 with your favorite browser to see your project.
-
-### Customization
-
-You can easily configure Next js Boilerplate by making a search in the whole project with `FIXME:` for making quick customization. Here is some of the most important files to customize:
-
-- `public/apple-touch-icon.png`, `public/favicon.ico`, `public/favicon-16x16.png` and `public/favicon-32x32.png`: your website favicon, you can generate from https://favicon.io/favicon-converter/
-- `src/styles/global.scss`: your sCSS file using Tailwind CSS
-- `src/config/appSEOConfig.ts`: configuration file
-- `next-sitemap.config.js`: sitemap configuration
-
-You have access to the whole code source if you need further customization. The provided code is only example for you to start your project. The sky is the limit 🚀.
-
-### Commit Message Format
-
-```shell
-yarn commit
-```
-
-### Deploy to production
-```shell
-$ yarn build
-$ yarn start
-```
 
 The generated HTML and CSS files are minified (built-in feature from Next js). It will also removed unused CSS from [Tailwind CSS](https://tailwindcss.com).
 
